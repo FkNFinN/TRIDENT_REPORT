@@ -1,13 +1,11 @@
 \chapter{INTRODUCTION}
 
 \section{SIGNIFICANCE AND BACKGROUND OF THE PROBLEM}
-\subsection{Neglecting Seabed Pollution}
+\subsection{Noise Pollution in UUV}
 
-Thailand’s marine territories, for example, the Andaman Sea and the Gulf of
-Thailand, are becoming more polluted. A significant amount of pollution, including plastics, heavy metals, industrial runoff, and abandoned fishing equipment, falls to the seabed. Which is affecting organisms and disrupting the food chain. In contrast to surface waste, which is frequently noticeable and easily removed, seabed contamination is concealed and keeps building up. The problem is compounded by the lack of inspection, creating blind spots in ecosystem management and marine policy.
+Traditional UUV came packaged with noise pollution, whether it being from its motors, acoustic sensors, or even water disperse around its shape. This toughens the recording and tracking attempt for various marine species. 
 
-This calls for an innovative solution: a system that can continuously and
-independently monitor undersea conditions. UUVs are transformative in this situation. They provide the capacity to explore the ocean floor, identify environmental risks, and gather information that can guide prompt action.
+Big commercial submarines adopt another method providing more control, and almost no noise is created. A ballast tank, which is by all mean a better method for a lengthy period hovering, compared to other UUV. But this is hard to implement in a small-scale submersible.
 
 \subsection{Enhancing Marine Species Monitoring in Thailand}
 
@@ -34,19 +32,222 @@ research, environmental monitoring, and infrastructure inspection. However, most
 
 \section{OBJECTIVES OF THE PROJECT}
 
-The primary objective of this project is to design and develop multipurpose
-Unmanned Underwater Vehicle (UUV) that supports various underwater applications in both research and maintenance. The system is aimed to provide affordable, modular, and adaptable platform that can operate effectively in coastal and nearshore environments of Thailand.\\
-\textbf{Key Objectives}
+The primary objective of this project is to design and develop multipurpose Unmanned Underwater Vehicle (UUV) that supports various underwater applications in both research and maintenance. The system is aimed to provide affordable, modular, and adaptable platform that can operate effectively in canal and coastal environments of Thailand. 
+ \textbf{Key Objectives}
 \begin{enumerate}
-	\item Develop a Modular Multi-Use UUV Platform:	Create a compact and cost-effective UUV structure that allows easy integration of various tools and sensors based on mission requirements. Design the system to support plug-and-play modules for quick reconfiguration.
-	\item Enable Underwater Debris Detection and Cleaning:
-	Integrate vision-based detection for identifying marine litter and seabed debris. Attach basic cleaning tools or manipulators for collecting or tagging debris for environmental maintenance.
+	\item Develop a Modular Multi-Use UUV Platform:	
+	
+	Create a compact and cost-effective UUV structure that allows easy 
+	integration of various tools and sensors based on mission requirements. 
+	Design the system to support plug-and-play modules for quick 
+	reconfiguration.
+	\item Enable Underwater Debris Detection: 
+	
+	Integrate vision-based detection for identifying marine litter and 
+	seabed debris. Attach basic cleaning tools or manipulators for collecting or tagging debris for environmental maintenance.
 	\item Support Marine Biological Research (Ichthyology):
-	Equip the UUV with high-resolution cameras to monitor marine life habitats and behaviors. Enable data collection for research in ichthyology and marine biodiversity mapping.
+	
+	Equip the UUV with high-resolution cameras to monitor marine 
+	life habitats and behaviors. Enable data collection for research in 
+	ichthyology and marine biodiversity mapping.
 	\item Monitor and Inspect Underwater Infrastructure:
-	Facilitate routine inspection of underwater systems such as pipelines, fish cages, research sensors, and marine installations. Provide real-time visual data for structural assessment and potential failure detection.
+	
+	Facilitate routine inspection of underwater systems such as pipelines, 
+	fish cages, research sensors, and marine installations. Provide 
+	real-time visual data for structural assessment and potential failure 
+	detection. 
+	\item Reducing Noise Pollution in UUV:
+	
+	Reduce the noise pollution created by other modern UUV, by reverting to 
+	a traditional mean. A fully controllable ballast tank and maneuverable 
+	hovering. 
 \end{enumerate}
 
 \section{SCOPE AND LIMITATIONS OF PROJECT}
 
-To minimize manufacturing costs while maintaining structural functionality, the connecting components of the Unmanned Underwater Vehicle (UUV) were fabricated by 3d-printing PETG components before applying a resin shell around. This method allows for rapid prototyping, ease of customization, and acceptable water resistance, particularly in shallow-to-moderate depth applications. Traditional 3D-printed materials such as PLA, while accessible, exhibit poor waterproofing and dimensional stability in underwater environments, making them unsuitable for critical structural components.
+To minimize manufacturing costs while maintaining structural 
+functionality, the connecting components of the Unmanned Underwater 
+Vehicle (UUV) were fabricated by 3D-printing PETG components before 
+applying a resin shell around. This method allows for rapid prototyping, 
+ease of customization, and acceptable water resistance, particularly in 
+shallow-to-moderate depth applications. Traditional 3D-printed materials 
+such as PLA, while accessible, exhibit poor waterproofing and dimensional 
+stability in underwater environments, making them unsuitable for critical 
+structural components.
+
+Despite its advantages, PETG with resin coat exhibits lower mechanical 
+properties. Specifically, tensile strength, impact resistance, and 
+fatigue tolerance when compared to industrial-grade polymers (e.g., 
+polycarbonate, PEEK) or metallic materials. These limitations must be 
+considered in operational contexts involving hydrostatic pressures, 
+mechanical vibrations, or potential collision events. Finite Element 
+Analysis (FEA) is recommended for evaluating stress concentrations within 
+these components under load conditions.
+
+Given the spatial constraints inherent in the UUV’s compact form factor, 
+the onboard battery modules are limited in both physical size and 
+capacity, leading to a reduction in operational endurance. This imposes 
+constraints on mission duration and necessitates efficient power 
+management strategies, such as pulse-width modulation (PWM) for thruster 
+control and low-power sleep modes for auxiliary systems. Trade-offs 
+between vehicle autonomy and power density are actively evaluated.
+
+For underwater communication, Bluetooth and other RF-based protocols are 
+infeasible due to rapid signal attenuation in conductive media like 
+seawater. To overcome this, the UUV employs a tethered Ethernet-based 
+Local Area Network (LAN) for high-throughput, low-latency communication d
+uring deployment and testing. This configuration supports real-time 
+control, telemetry acquisition, and bulk data transfer, which are 
+critical for debugging, mission uploads, and sensor data retrieval.
+
+The vehicle is equipped with two ballast tanks designed to modulate its 
+net buoyancy, allowing for depth control without constant thrust input. 
+By achieving near-neutral buoyancy and increasing vertical displacement, 
+the UUV can maintain submerged states for extended periods. This feature 
+is advantageous for the UUV’s primary objective: Reducing Noise Pollution 
+in UUV. Reduced propulsion noise and acoustic signal created by other UUV. 
+
+\section{Methodology Used in the Project}
+
+TRIDENT is designed to have a highly compact form factor, as its 
+structure contains air, which increases buoyancy and makes submersion 
+more challenging due to density differences. Since one of the primary 
+objectives of the project is to navigate confined spaces, minimizing the 
+vehicle's size enhances its ability to operate efficiently in such 
+environments. 
+
+\subsection{Software Development}
+
+The robot primarily operates using ROS (Robot Operating System), which 
+provides a flexible framework for handling navigation, sensor integration, 
+and autonomous decision-making. For underwater mapping, the robot employs 
+Simultaneous Localization and Mapping (SLAM), a technique that allows it 
+to construct a map of the seabed while simultaneously determining its own 
+position within that environment. To achieve this, the system utilizes 
+laser distance sensors, which play a crucial role in detecting the 
+contours and features of the seabed in real time. These sensors, 
+specifically infrared (IR) distance sensors from Sharp, are designed to 
+measure distances within a range of 20 cm to 150 cm. They operate based 
+on triangulation and reflected infrared light intensity, where the 
+emitted IR beam is reflected off surfaces and detected by an internal 
+position-sensitive detector (PSD). This data is then processed to 
+estimate distances accurately, enabling the robot to create a detailed 
+and precise underwater map while navigating autonomously.
+
+\subsection{Communications}
+
+The TRIDENT robot utilizes LAN communication for underwater operations, 
+as water can completely block the radio frequency signals required for 
+other forms of communication. Within the robot, a Raspberry Pi serves as 
+the primary control unit, running ROS (Robot Operating System) to manage 
+and facilitate communication with an Arduino Nano. The Arduino Nano is 
+responsible for controlling the sensors and motors via UART (Universal 
+Asynchronous Receiver-Transmitter). UART is a serial communication 
+protocol that enables data transfer between devices without the need for 
+a shared clock signal. Data is transmitted one bit at a time, including 
+a start bit, data bits, an optional parity bit, and a stop bit. This 
+protocol is commonly used in embedded systems, microcontrollers, and 
+computers, supporting full-duplex communication through transmit (TX) 
+and receive (RX) lines.
+
+\section{Project Implementation Plan}
+
+\subsection{Independent Site Selection and Mission Planning}
+
+Site selection will be conducted independently based on publicly 
+available data, prior studies, and observed environmental needs. Emphasis 
+will be placed on identifying locations suitable for underwater 
+inspection, ecological observation, and experimental data collection. 
+
+\subsection{Data acquisition and analysis}
+
+The UUV would deploy to conduct comprehensive seabed surveys. Generate 
+detailed monitoring of the underwater terrain, accurately documenting the 
+distribution of pollutants and the characteristics of marine habitats. 
+
+\subsection{Targeted Debris Removal Operations}
+
+UUV would deploy for targeted debris removal missions. The operations 
+will focus on extracting pollutants, particularly plastics and abandoned 
+fishing gear, from identified hotspots, thereby mitigating their adverse 
+environmental impact.
+
+\subsection{Marine Species Documentation and Monitoring}
+
+The UUV will be employed to capture video and image data of marine 
+species within their natural habitats. Which crucial for biodiversity 
+assessments, species identification, and behavioral studies, contributing 
+to a deeper understanding of the local marine ecosystems. 
+
+\subsection{Underwater Infrastructure Inspection}
+
+Routine inspections of underwater infrastructure, including pipelines, 
+fish cages, and other installations. These inspections will facilitate 
+the detection of structural damage, corrosion, and other potential issues, 
+enabling timely maintenance and preventing costly failures.
+
+\section{Benefits Derived from the Research}
+
+\subsection{Reduce Seabed Pollution}
+
+The UUV's advanced mapping and debris removal capabilities will directly 
+contribute to cleaner and healthier marine environments. By accurately 
+identifying and targeting pollution hotspots, particularly those 
+contaminated with plastic and abandoned fishing gear, the project will 
+mitigate the detrimental effects of these pollutants on marine life.
+
+\subsection{Data-Driven Conservation}
+
+The UUV will provide data that supports informed decision-making in 
+marine conservation and management. This data will enable targeted 
+interventions and enhance the effectiveness of conservation efforts.
+
+\subsection{Improved Underwater Infrastructure Maintenance}
+
+By deploying the UUV for routine inspections of underwater 
+infrastructure, such as pipelines and fish cages, the project will 
+reduce the reliance on expensive and potentially hazardous diver-based 
+inspections. Increasing driver safety. 
+
+\section{Capstone Design Details}
+
+\subsection{Application of Knowledge and Skills from Previous Courses}
+
+Subject that lie closly to the project include
+
+01006723: General Physics 1 classical mechanics, including motion, forces, energy, and buoyancy 
+
+01006725: General Physics 2 electronic circuits, understanding motor behavior, battery systems 
+
+01416312: Electric Circuit and Electronics designing and building the UUV’s electronic systems, including power distribution, sensor connections, motor controllers 
+
+01416305: Artificial Intelligence Technology vision-based object detection 
+
+01416308: Kinematics and Dynamics analyzing forces and torques on the body, predicting behavior under water currents, and developing motion control algorithms 
+
+01416500: Computer Vision image processing, object detection, and navigation using onboard cameras 
+
+01416306: Safety and Standardization in RAI compliance with underwater safety standards (IP ratings, battery safety) 
+
+01416319: Manufacturing Process Applied in the mold-based component fabrication using epoxy resin and silicone, and in selecting suitable materials and production methods for waterproof, strong, and modular design 
+
+01416511: Mobile Robots autonomous navigation, localization, path planning, sensor fusion, and the integration of mechanical and software systems in mobile robotic platforms 
+
+01416408: COM AID Mechanical Design CAD modeling, stress analysis, and mechanical design optimization for components like the ballast tank, motor housing, and main frame structure 
+
+\subsection{Design of a Device}
+
+For a modular use UUV platform, the robot must be compatible with a tool 
+such as robot arm for collecting debris or holding on to pipeline. For 
+inspection and monitoring, the device is equipped with a camera module, 
+two hydrostatic pressure sensors and two laser distant sensors. These 
+sensors enable the use of Point Cloud for mapping the underwater bed for 
+more data collecting.
+
+Additionally, focusing primarily on minimizing environmental impact, the 
+design of our robot is centered around this concept. Two key improvements 
+over traditional UUVs are (1) the elimination of noise pollution 
+generated by the motor and (2) reducing the cost of the robot by 
+optimizing its design. Additionally, the robot is designed to have a 
+smooth, rounded shape with as few openings as possible to better 
+withstand the challenges of Thailand’s polluted waterways.
