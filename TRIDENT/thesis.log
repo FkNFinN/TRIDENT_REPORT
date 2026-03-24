@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.3.19)  24 MAR 2026 01:33
+This is LuaHBTeX, Version 1.24.0 (MiKTeX 25.12) (format=lualatex 2026.3.19)  24 MAR 2026 23:51
  restricted system commands enabled.
 **thesis.tex
 (./thesis.tex
@@ -1192,52 +1192,93 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 
-] [2] [3] [4]) (./chapters/ch2_related_theories.tex [5]
+] [2] [3] [4]
+<images/Ballast.png, id=456, 462.528pt x 357.2547pt>
+File: images/Ballast.png Graphic file (type png)
+<use images/Ballast.png>
+Package luatex.def Info: images/Ballast.png  used on input line 253.
+(luatex.def)             Requested size: 136.57161pt x 105.27473pt.
+ [5<./images/Ballast.png>]
+<images/MotorTube.png, id=464, 462.528pt x 260.172pt>
+File: images/MotorTube.png Graphic file (type png)
+<use images/MotorTube.png>
+Package luatex.def Info: images/MotorTube.png  used on input line 271.
+(luatex.def)             Requested size: 170.71628pt x 96.0279pt.
+File: images/Ballast.png Graphic file (type png)
+<use images/Ballast.png>
+Package luatex.def Info: images/Ballast.png  used on input line 337.
+(luatex.def)             Requested size: 136.57161pt x 105.27473pt.
+ [6<./images/MotorTube.png>] [7])
+(./chapters/ch2_related_theories.tex [8]
 Chapter 2.
-) (./chapters/ch3_1_mechanical_design.tex [6
+) (./chapters/ch3_design.tex [9
 
 ]
 Chapter 3.
-) (./chapters/ch3_2_electrical_design.tex [7
+<images/BallastMov.png, id=486, 1927.2pt x 1084.05pt>
+File: images/BallastMov.png Graphic file (type png)
+<use images/BallastMov.png>
+Package luatex.def Info: images/BallastMov.png  used on input line 18.
+(luatex.def)             Requested size: 170.70569pt x 96.02194pt.
+<images/BallastSta.png, id=488, 462.528pt x 260.172pt>
+File: images/BallastSta.png Graphic file (type png)
+<use images/BallastSta.png>
+Package luatex.def Info: images/BallastSta.png  used on input line 37.
+(luatex.def)             Requested size: 170.71628pt x 96.0279pt.
+[10
 
-]
+<./images/BallastMov.png><./images/BallastSta.png>]
+<images/Prop.png, id=498, 462.528pt x 260.172pt>
+File: images/Prop.png Graphic file (type png)
+<use images/Prop.png>
+Package luatex.def Info: images/Prop.png  used on input line 68.
+(luatex.def)             Requested size: 170.71628pt x 96.0279pt.
+<images/Circuit.png, id=500, 462.528pt x 357.2547pt>
+File: images/Circuit.png Graphic file (type png)
+<use images/Circuit.png>
+Package luatex.def Info: images/Circuit.png  used on input line 102.
+(luatex.def)             Requested size: 136.57161pt x 105.27473pt.
+ [11<./images/Prop.png><./images/Circuit.png>]
+<images/CircuitSide.png, id=509, 462.528pt x 357.2547pt>
+File: images/CircuitSide.png Graphic file (type png)
+<use images/CircuitSide.png>
+Package luatex.def Info: images/CircuitSide.png  used on input line 131.
+(luatex.def)             Requested size: 136.57161pt x 105.27473pt.
+<images/Frame.png, id=510, 462.528pt x 357.2547pt>
+File: images/Frame.png Graphic file (type png)
+<use images/Frame.png>
+Package luatex.def Info: images/Frame.png  used on input line 154.
+(luatex.def)             Requested size: 136.57161pt x 105.27473pt.
+ [12<./images/CircuitSide.png><./images/Frame.png>])
+(./chapters/ch4_results.tex [13]
 Chapter 4.
-) (./chapters/ch5_conclusion.tex [8
+) (./chapters/ch5_conclusion.tex [14
 
 ]
 Chapter 5.
 )
 
-LaTeX Warning: Citation `zhang2023design' on page 9 undefined on input line 106
-.
+LaTeX Warning: Citation `zhang2023design' on page 15 undefined on input line 10
+6.
 
-[9
+[15
 
 ]
 No file thesis.bbl.
-(./chapters/appendix.tex [10
+(./chapters/appendix.tex [16
 
 
 ]
-<images/authorbib.png, id=297, 103.13531pt x 130.98938pt>
+<images/authorbib.png, id=533, 103.13531pt x 130.98938pt>
 File: images/authorbib.png Graphic file (type png)
 <use images/authorbib.png>
 Package luatex.def Info: images/authorbib.png  used on input line 18.
 (luatex.def)             Requested size: 113.8127pt x 113.81392pt.
- [11
+ [17
 
 
 
-<./images/authorbib.png>])
-
-Package caption Warning: Unused \captionsetup[table] on input line 35.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[figure] on input line 36.
-See the caption package documentation for explanation.
-
-(./thesis.aux)
+<./images/authorbib.png>]) (./thesis.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1246,30 +1287,24 @@ L3 programming layer <2025-12-24>
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 537C03ED993B4EF5A1370B07C6F1A0B8;4998
-(rerunfilecheck)             After:  C3511F450FFB5C45E827680EC7D742D3;8630.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 26DC66F21A6D5A47028D4DFDE0B355C2;11139.
 )
 
 Here is how much of LuaTeX's memory you used:
- 19794 strings out of 476081
+ 19973 strings out of 476081
  100000,953878 words of node,token memory allocated
  696 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 7 attribute, 93 glue_spec,
  7 attribute_list, 2 write nodes
-   avail lists: 2:805,3:315,4:208,5:161,6:104,7:8098,8:2,9:474,10:15,11:862
- 41799 multiletter control sequences out of 65536+600000
- 69 fonts using 29888903 bytes
- 79i,12n,97p,620b,439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 2:1086,3:418,4:276,5:192,6:144,7:8084,8:2,9:684,10:15,11:794
+ 41923 multiletter control sequences out of 65536+600000
+ 69 fonts using 29888823 bytes
+ 79i,12n,97p,620b,560s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <./fonts/THSarabun.ttf><./fonts/THSarabunBold.ttf>
-Output written on thesis.pdf (23 pages, 92185 bytes).
+Output written on thesis.pdf (29 pages, 13348951 bytes).
 
-PDF statistics: 323 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 1048576)
- 249 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 559 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 1048576)
+ 473 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -1,0 +1,189 @@
+\chapter{DESIGN AND CONSTRUCTION}
+
+\section{Mechanical Design}
+
+\subsection{Ballast Tank System}
+
+The ballast tank (Figure~\ref{fig:1.1}) utilizes a 500ml syringe for 
+ease of manufacturing and control. An M6 lead screw guides 
+a threaded coupling along the rod, which is coupled to a 
+JGB37-520 motor at the terminal. The ballast tank is divided 
+into two main sections: the mobile section and the stationary 
+section.
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=6cm,height=3.375cm]{BallastMov.png}
+\end{center}
+
+\caption{Mobile Section of Ballast Tank}
+\label{fig:3.1}
+\end{figure}
+
+\vspace{1em}
+
+The mobile section (Figure~\ref{fig:3.1}) consists of two 3D-printed 
+parts connected by three M4 lead screws, each 100mm in length. 
+The front-facing part of the syringe has a rubber seal, while 
+the aft section features a threaded coupling. This section can 
+move independently along the syringe’s radial axis.
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=6cm,height=3.375cm]{BallastSta.png}
+\end{center}
+
+\caption{Stationary Section of Ballast Tank}
+\label{fig:3.2}
+\end{figure}
+
+\vspace{1em}
+
+The stationary section (Figure~\ref{fig:3.2}) is the main syringe 
+body, with its aft end joined to a 3D-printed cap with a snap-fit 
+mechanism. This cap connects to the motor and houses the motor-M6 
+coupler. Three M3 lead screws are bonded to the end cap, acting as 
+guiding rails for the mobile section. At the tip of each screw, a 
+3D-printed cap holds them perpendicular, and a bearing is attached 
+to ensure smooth rotation of the main M6 lead screw.
+
+\subsection{Motor Tube Compartment}
+
+Figure~\ref{fig:1.2}, the propulsion system utilizes A2212 930kV 
+brushless DC (BLDC) motors, each securely mounted onto a coated 
+structural component positioned between two acrylic tubes. These 
+tubes have an outer diameter (OD) of 50 mm, a thickness of 3 mm, 
+and a length of 70 mm. At the end of each tube, an outlet 
+facilitates controlled water intake and expulsion, enabling 
+efficient fluid flow management within the system.
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=6cm,height=3.375cm]{Prop.png}
+\end{center}
+
+\caption{Propellor Design}
+\label{fig:3.3}
+\end{figure}
+
+\vspace{1em}
+
+Figure~\ref{fig:3.3} illustrates the propeller design, which 
+is a 3D-printed part coated with resin layer. The propeller 
+is designed to have 8 blades. The blades are angled to optimize 
+thrust while minimizing drag, ensuring efficient propulsion 
+for the underwater vehicle.
+
+The propeller also have a circular ring around the blades, 
+which serves to enhance the structural integrity of the propeller 
+. The ring helps to stabilize the flow of water around the blades, 
+creating a streamline laminar output flow and reducing turbulence, 
+which can improve the overall noise performance of the propulsion 
+system.
+
+\subsection{Circuit Compartment}
+
+The circuit tube is designed to be partially sealed, leaving only 
+the necessary space for cable connections. This design ensures a 
+partial safety precaution against small leaks, with all core 
+components securely fitted inside to prevent interference with 
+other parts of the robot.
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=4.8cm,height=3.7cm]{Circuit.png}
+\end{center}
+
+\caption{Circuit Compartment Design}
+\label{fig:3.4}
+\end{figure}
+
+\vspace{1em}
+
+Figure~\ref{fig:3.4} shows the circuit compartment design. 
+The circuit is housed within an acrylic tube with an outer diameter 
+(OD) of 90 mm, a wall thickness of 3 mm, and a length of 220 mm. At 
+each end of the tube, a 3D-printed cap is securely snapped into 
+place, enclosing the compartment while also serving as a connector 
+for a 100 mm-long 1010 aluminum profile. These aluminum profiles 
+function as mounting structures for the sensor system, providing 
+stability and ease of integration.
+
+Enclosed within the acrylic tube is the primary control and power 
+management system, consisting of a Raspberry Pi, an Arduino Nano, 
+voltage sensors, an inertial measurement unit (IMU), a terminal, 
+and a Lipo Battery for rechargeability and stability. These 
+components collectively form the core circuitry housed within 
+the enclosure.
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=4.8cm,height=3.7cm]{CircuitSide.png}
+\end{center}
+
+\caption{Circuit Compartment Design Side View}
+\label{fig:3.5}
+\end{figure}
+
+\vspace{1em}
+
+To facilitate maintenance, all components are mounted on an lead 
+3D-printed rod, enabling a controlled sliding motion for easy access 
+and adjustments.
+
+Externally, the system integrates a laser distance sensor, hydrostatic 
+pressure sensors, and a Raspberry Pi camera, enabling environmental 
+perception and data acquisition for autonomous operation.
+
+\subsection{Main Frame Design}
+
+\vspace{1em}
+
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=4.8cm,height=3.7cm]{Frame.png}
+\end{center}
+
+\caption{Main Frame Design}
+\label{fig:3.6}
+\end{figure}
+
+\vspace{1em}
+
+The robot's shell is divided into four distinct sections, each 
+separated by an acrylic plane: the front dome, which encapsulates 
+the Raspberry Pi Camera for visual data acquisition and the 
+fail-safe module to ensure system redundancy; two central 
+compartments designed to house the ballast tank, propulsion 
+motor, and circuit enclosure; and the aft dome.
+
+This modular design, with acrylic planes separating the 
+compartments, optimizes component placement, provides easy 
+access for maintenance and system integration, and ensures 
+structural integrity and functionality. The central coupler is 
+coated and bonded to two acrylic tubes with an outer diameter 
+(OD) of 220 mm, a wall thickness of 3 mm, and a length of 10 mm. 
+At the end of each tube, an additional coated coupler connects 
+the dome to the tube, ensuring structural integrity.
+
+Four M3 lead screws run along the sides of the robot, providing 
+compression to maintain structural stability. The dome is designed 
+for removal, as it is not permanently sealed. Instead, an O-ring 
+(or a Rubber Seal), in combination with the applied compression, 
+ensures a watertight seal while allowing for easy access to 
+internal components.
+
+\section{Electrical Design}
+\section{Control System Design}
+\section{AI Detection System Design}
+\section{Manufacturing Process}
